@@ -1,0 +1,428 @@
+<!doctype html>
+<html oncontextmenu="return true" lang="de"><head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title style="color: red"id="title">🔒Startseite
+</title>
+<script>
+if (window !== top) top.location='getlost';</script>
+<link rel="icon" href="Media/4.svg">
+<link id="style"rel="stylesheet" href="Styles/2.css">
+</head>
+
+<body onload="reFural();playNext()" class="dark">
+
+
+<div class="all">
+
+<div style="display:none">
+<progress id="ajaxProgressBar" class="progress is-tiny is-dark" max="100" style="display: none;">50%</progress>
+</div>
+
+
+<div id="id01" style="display:none" class="modal">
+
+<div class="modal-content animate">
+
+
+<div class="container">
+
+
+<input type='text' id="inputTextArea" onload="this.value=''"oninput="cHeck()"class="textarea is-large is-primary" placeholder="Passwort eingeben" autofocus >
+
+<button id="anmeld" onclick="orBit()"type="submit">Anmelden</button>
+
+</div //container>
+
+<p id='error'>
+Die Anmeldung ist fehlgeschlagen</p>
+<p id="expir">Ihre Sitzung ist ungültig oder abgelaufen</p>
+</div //animate>
+</div  //modal-content animate>
+
+
+
+<div id="inputFooterStatus" class="is-pulled-right">Size : <strong>8</strong> B, 8 Characters</div>
+<div class="buttons is-centered">  <input display="none" type="checkbox" id="isAuto" checked=""></div>
+
+<button id="defaultAction"
+
+//change number after SHA for different encoding
+
+onclick="generateSHA256Hash();"
+-->  <!--Extremely necesary-->   class="button is-medium is-info mr-4"></button>
+
+
+<textarea style="display:none"id="outputTextArea" class="textarea is-large is-info" placeholder="Generated SHA256 Hash"></textarea>
+
+
+
+
+<!--end leave alone-->
+
+
+
+<div id="inhalt" style="display:block">
+
+
+<dox id="hees" style="display:none">
+
+
+
+
+
+
+<div class="navbar">
+
+<div id="filterbox2">
+<div id="filterwrap">
+<span class="header3" onclick="darkMode(this)">&nbsp</span>
+<span class="header3" onclick="komischerMode(this)">&nbsp</span>
+<span class="header3"onclick="grayMode(this)">&nbsp</span>
+
+</div>
+</div>
+
+
+
+</div>
+<!--  <hr class="ug">-->
+<div id="coolthing2" class="" style="">
+
+</div>
+
+
+
+
+
+
+
+<div class="navbar">
+<!--
+<span id="greeting" class="header"></span>
+<br class="ferret">-->
+
+<div id="filterbox">
+<div id="filterwrap">
+<span class="header2" id="darlit"onclick="darkMode(this)">&nbspHeller Modus&nbsp</span>
+<span class="header2" id="komisch"onclick="komischerMode(this)">Komischer Modus</span>
+<span id="grayscale"class="header2"onclick="grayMode(this)">&nbsp Keine Sattheit &nbsp</span>
+
+</div>
+</div>
+
+
+
+</div>
+<!--  <hr class="ug">-->
+<div id="coolthing" class="" style="">
+
+</div>
+
+</dox>
+
+</div //inhalt>
+
+
+<!--end sticky -->
+
+
+<div class="content dark"  id="contenterg" style="">
+
+
+
+  <div style=""class="commentsection">
+    <audio controls controlslist="nodownload" style=""id="vid" autofocus src="" onended="autoPlay();" ondurationchange="alterDescription();" tabindex="-1">
+  <source src="" type="audi/mpeg">
+  </audio>
+
+    <h1 id="titl">Ich weiß nicht</h1>
+
+    <div>
+
+<div id="vidactions" class="comment">
+  <a class="downlo" id="downlo"  tabindex="-1"  href="" download="🪲">Herunterladen</a>
+</div>
+
+<div id="descrip"class="comment">
+
+
+<div class="channel-profile" style="cursor: pointer" id="profai" onclick="openProf()">
+<img class="profileimage"src="Media/Shoebill1.jpeg">
+  <span id="channel-name"><h2 id="nameg" style="">&nbspTheo</h2></span>
+  </div>
+  <br>
+<h3 id="subscribe">Abon<wbr>nieren | 0</h3>
+<span id="sharing" style="">Geteilt April 19, 2022</span>
+<br>
+
+
+
+<hr>
+<br>
+
+</div>
+
+<div id="morevideoscontainer" style="" class="comment">
+<div id="morevideos" style="display:block">
+
+<p id="autplay">nächstes Stück<wbr> automatisch abspielen</p>
+  <label class="switch"><input id="autoplay" type="checkbox" checked="true"><span class="slider round"></span></label>
+<br><br>
+  <h3 style="color: dodgerblue; cursor: pointer"onclick="playNext()">Nächstes Stück →</h3>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div //videocont>
+</div //comment>
+</div //commentsection>
+</div //contenterg>
+</div //all>
+
+
+
+
+<script type="text/javascript">
+let vid= document.getElementById('vid');
+let type = '.mp3'
+
+window.onload = reFural();
+
+
+function openProf() {
+  window.location.assign('3.html');
+}
+function autoPlay(){
+ if(document.getElementById('autoplay').checked==true){setTimeout(playNext, 4000)}
+}
+
+function playNext(){
+let easen;
+var tracks = ['1','2','3','4','5','6','7','8','9','10','11','12','12.mp4','13','14','15' ]
+var random_track = tracks[Math.floor(Math.random()*tracks.length)];
+easen = random_track;
+if(random_track.includes('.')){type=""}else{type=".mp3"}
+vid.src='Media/'+random_track + type;
+randbackCol();
+vid.focus();
+vid.play();
+const index = tracks.indexOf(easen);
+if (index > -1) {
+  tracks.splice(index, 1);
+}
+
+}
+
+
+function alterDescription(){
+let donlo=document.getElementById('downlo');
+downlo.href=vid.src;}
+
+</script>
+
+
+
+
+
+<script  src="Cdn/Algoreithm.js"></script><script>
+document.onkeydown = function (e) {
+
+  if(document.getElementById('contenterg').style.display=="flex"){
+    if(e.metaKey && e.which==39){playNext();}
+    if(e.metaKey && e.which==40){playNext();}
+    if(e.ctrlKey && e.which==39){playNext();}
+    if(e.ctrlKey && e.which==40){playNext();}
+  }
+
+
+
+//  else  if (e.metaKey && e.which==27 || e.ctrlKey && e.which==27) {loGout();}
+//else   if (e.metaKey && e.which==49){event.preventDefault();vid0.focus();vid0.style.transform="scale(1.05)"}
+
+//  else   if(e.keyCode == 123) {
+//      return false;
+//  }
+//  else   if(e.ctrlKey || e.shiftKey || e.keyCode == 73 || e.keyCode == 81|| e.keyCode == 87|| e.keyCode == 80|| e.altKey || e.keyCode == 67 || e.keyCode == 123 || e.which == 123 || e.keyCode == 85){
+//      return false;
+//  }
+//  }
+}
+</script>
+
+<script type="text/javascript">
+
+let logincount = 0;
+
+let input=document.getElementById('inputTextArea');
+let output=document.getElementById('outputTextArea');
+let error=document.getElementById('error');
+let progress=document.getElementById('ajaxProgressBar');
+
+let anmeld = document.getElementById('anmeld');
+
+function orBit() {
+
+if (output.value=="b804a9db0bf63316271e024d3cefc39a2ae6d35e4387118d975c6b7d90ab19e1") {
+getTin();
+}
+else if(logincount>=74) {
+return false;
+}
+else if(logincount>=33) {
+setTimeout(errMessage, 100);
+output.value="";
+input.focus();
+logincount++;
+setTimeout(function(){
+input.value="";}, 400);
+}
+else {
+setTimeout(errMessage, 100);
+output.value="";
+input.focus();
+setTimeout(function(){
+input.value="";}, 400);
+logincount++;
+
+}}
+
+function reFural(){input.focus();
+if(document.referrer.includes('3.html')){
+  getTin();}
+  else{getTout();}
+}
+function getTout(){output.value="";input.focus();
+document.getElementById('hees').style.display="none";
+document.getElementById('contenterg').style.display="none";
+document.getElementById('id01').style.display="block";
+}
+
+
+function getTin(){
+output.value="";
+document.getElementById('hees').style.display="block";
+document.getElementById('id01').style.display="none";
+document.getElementById('contenterg').style.display="flex";
+document.getElementById('title').innerHTML="🔓Willkommen Isïa!";
+vid.focus();
+setTimeout(function(){vid.pause()}, 5);
+playNext();
+setTimeout(exPire, 3600000);
+setTimeout(function(){
+input.value="";}, 400);
+document.getElementById('greeting').innerHTML="";
+iguana=0;
+setTimeout(gReeting, 100);
+logincount=0;
+}
+
+function cHeck() {
+
+if (input.value.length >= 1) {
+setTimeout(function(){ error.className = error.className.replace("show", ""); }, 0);
+document.getElementById('expir').style.opacity="0";
+}
+
+progress.style.display="none"
+
+addEventListener('keydown', function(event){
+if (event.which==13) {
+anmeld.click();
+}
+});
+}
+function exPire() {
+if (document.getElementById('id01').style.display=="block") {
+event.preventDefault();
+}
+else {
+  vid.pause();
+  document.getElementById('hees').style.display="none";
+  document.getElementById('contenterg').style.display="none";
+  document.getElementById('id01').style.display="block";
+  setTimeout(function(){ error.className = error.className.replace("show", ""); }, 0);
+  document.getElementById('inputTextArea').focus();
+  document.getElementById('expir').style.opacity="1";
+  document.getElementById('title').innerHTML="🔒Startseite";
+  output.value="";
+}
+}
+
+function errMessage() {
+var error = document.getElementById("error");
+setTimeout(function(){
+error.className = "show";}, 300);
+}
+var iguana = 0;
+var greeting1 = 'Willkommen Isïa!';
+
+</script>
+<script>
+function darkMode(x) {
+document.body.classList.toggle('dark');
+document.getElementById('komisch').classList.toggle('light');document.getElementById('darlit').classList.toggle('light');document.getElementById('grayscale').classList.toggle('light');
+document.getElementById('filterbox').classList.toggle('light');document.getElementById('filterbox2').classList.toggle('light');document.getElementById('coolthing').classList.toggle('light');document.getElementById('coolthing2').classList.toggle('light');
+document.getElementById('contenterg').classList.toggle('dark');
+if (document.body.classList=="dark") {
+x.innerHTML="&nbsp;Heller Modus &nbsp;"
+}
+else {
+x.innerHTML="Dunkler Modus"
+}
+}
+</script>
+<script>
+
+function grayMode(){
+document.documentElement.classList.toggle('grayscale');
+if(document.getElementById('grayscale').innerHTML.includes('Keine')){document.getElementById('grayscale').innerHTML="Normale Sattheit"}
+else{document.getElementById('grayscale').innerHTML="&nbsp; Keine Sattheit &nbsp;"}
+}
+
+function komischerMode(x) {
+document.body.classList.toggle('komisch')
+if (x.innerHTML=="Komischer Modus") {
+x.innerHTML="&nbsp;Normaler Modus &nbsp;";
+if(vid.style.filter.includes('invert(0%)')){vid.style.filter.replace('invert(0%)','invert(100%)');}
+else{vid.style.filter+='invert(100%)'}
+
+}
+else {
+x.innerHTML="Komischer Modus";
+if(vid.style.filter.includes('invert(0%)')){vid.style.filter.replace('invert(0%)','invert(100%)');}
+else{vid.style.filter+='invert(100%)'}
+
+}
+}
+
+
+</script>
+
+<script type="text/javascript">
+//Random background for audio
+function randbackCol(){
+var colors = ['#902dea', '#e52cfb', '#ceba32','#aac204', '#47cae8', '#0e18ad','#246abc', 'salmon', 'maroon','#dbc698', '#34e5a6', '#42eeab','lightbrown', '#ac2314', '#45abba'];
+var random_color = colors[Math.floor(Math.random() * colors.length)];
+const cssTemplateString = `audio::-webkit-media-controls-panel{background:` + random_color +`}`;
+const styleTag = document.createElement("style");
+styleTag.innerHTML = cssTemplateString;
+document.head.insertAdjacentElement('beforeend', styleTag);
+vid.style.opacity='1';
+}
+</script>
+
+<script src="Cdn/ace.js" ></script>
+<script src="Cdn/crypto-js.min.js"></script>
+
+
+</body>
+</html>
