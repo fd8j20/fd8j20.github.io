@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Clogs</title>
+  <link></link>
+  <description></description>
+
+  <item>
+    <title>Post 1</title>
+    <link>https://atthis.link/</link>
+    <description>THis is post number 1. Yadeedadeeda.</description>
+  </item>
+
+  <item>
+    <title>Post 2</title>
+    <link></link>
+    <description>THis is post number 2. Yadeedadeeda.</description>
+  </item>
+
+
+</channel>
+
+</rss>
