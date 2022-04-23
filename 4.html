@@ -1,0 +1,600 @@
+<!doctype html>
+<html oncontextmenu="return false" lang="de"><head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title style="color: red"id="title">🔒Startseite
+</title>
+<script>
+if (window !== top) top.location='getlost';</script>
+<link rel="icon" href="Media/4.svg">
+<link id="style"rel="stylesheet" href="Styles/3.css">
+</head>
+
+<body onresize="centerFilters()"onload="reFural()" class="dark">
+
+
+<div class="all">
+
+<div style="display:none">
+<progress id="ajaxProgressBar" class="progress is-tiny is-dark" max="100" style="display: none;">50%</progress>
+</div>
+
+
+<div id="id01" style="display:none" class="modal">
+
+<div class="modal-content animate">
+
+
+<div class="container">
+
+
+<input type='text' id="inputTextArea" onload="this.value=''"oninput="cHeck()"class="textarea is-large is-primary" placeholder="Passwort eingeben" autofocus="" >
+
+<button id="anmeld" onclick="orBit()"type="submit">Anmelden</button>
+
+</div //container>
+
+<p id='error'>
+Die Anmeldung ist fehlgeschlagen</p>
+<p id="expir">Ihre Sitzung ist ungültig oder abgelaufen</p>
+</div //animate>
+</div  //modal-content animate>
+
+
+
+<div id="inputFooterStatus" class="is-pulled-right">Size : <strong>8</strong> B, 8 Characters</div>
+<div class="buttons is-centered">  <input display="none" type="checkbox" id="isAuto" checked=""></div>
+
+<button id="defaultAction"
+
+//change number after SHA for different encoding
+
+onclick="generateSHA256Hash();"  class="button is-medium is-info mr-4"></button>
+
+
+<textarea style="display:none"id="outputTextArea" class="textarea is-large is-info" placeholder="Generated SHA256 Hash"></textarea>
+
+
+
+
+<!--end leave alone-->
+
+
+
+<div id="inhalt" style="display:block">
+
+
+<dox id="hees">
+
+
+
+
+
+
+<div class="navbar">
+<!--
+<span id="greeting" class="header"></span>
+<br class="ferret">-->
+
+<div id="filterbox2">
+<div id="filterwrap">
+<span class="header3" onclick="darkMode(this)">&nbsp</span>
+<span class="header3" onclick="komischerMode(this)">&nbsp</span>
+<span class="header3"onclick="grayMode(this)">&nbsp</span>
+
+</div>
+</div>
+
+
+
+</div>
+<!--  <hr class="ug">-->
+<div id="coolthing2" class="" style="">
+
+</div>
+
+
+
+
+
+
+
+<div class="navbar">
+<!--
+<span id="greeting" class="header"></span>
+<br class="ferret">-->
+
+<div id="filterbox">
+<div id="filterwrap">
+<span class="header2" id="darlit"onclick="darkMode(this)">&nbspHeller Modus&nbsp</span>
+<span class="header2" id="komisch"onclick="komischerMode(this)">Komischer Modus</span>
+<span id="grayscale"class="header2"onclick="grayMode(this)">&nbsp Keine Sattheit &nbsp</span>
+
+</div>
+</div>
+
+
+
+</div>
+<!--  <hr class="ug">-->
+<div id="coolthing" class="" style="">
+
+</div>
+
+</dox>
+
+</div //inhalt>
+
+
+<!--end sticky -->
+
+
+<div class="content dark"  id="contenterg" style="">
+
+
+
+
+<div style=""class="commentsection">
+
+
+
+<!--First two divs in block for small screen-->
+
+
+<div id="descrip"class="comment">
+
+<br>
+
+
+<h3><a id="backlink" style="text-decoration:none;" href="3.html">← Zurück zum Profil</a></h3>
+<hr>
+<p>Sie sind irgendwie hier gekommen. Das heißt, dass Sie mir etwas sagen wollen.</p>
+<p>Ich bin nicht auf Twitter oder Facebook oder Instagram oder Tiktok oder Discord oder den meisten ähnlichen Plattformen. Es tut mir Leid wenn Sie auf diesen sind.</p>
+
+<p><a href="https://matrix.to/#/@buphag:matrix.org" target="_blank" >Wir können auf</a>&nbsp<a style="color: violet" href="https://matrix.org" target="_blank" >Matrix</a>&nbsp<a href="https://matrix.to/#/@buphag:matrix.org" target="_blank" >chatten</a> wenn Sie auch da sind (oder <a href="https://element.io/get-started#download" target="_blank" >Sie können ein Konto erstellen</a> wenn Sie nicht da sind und da sein möchten).</p>
+
+<p>Oder <a href="mailto:t_h_e_o@riseup.net?&subject=Betreff&body=">schreiben Sie mir eine E-Mail</a>, aber ich antworte normalerweise langsamer auf diese Weise.</p>
+
+
+<hr>
+<h3 class="openchat"id="openchat" onclick="openChat()"style="">Auch gibt es hier einen Chat, in dem Sie mir etwas schreiben können.<br></h3>
+
+
+
+<div id="playlistscont">
+
+<iframe crossorigin="anonymous" src="" id='chattable' oncontextmenu="return false" outline="0" frameborder='none'></iframe>
+
+
+
+</div //playlistscont>
+
+<div id="videocont" style="display:none">
+
+<br><br>
+
+</div //videocont>
+</div //comment>
+</div //commentsection>
+</div //contenterg>
+</div //all>
+
+<script>
+let chatbox=document.getElementById('chattable');
+let openchat = document.getElementById('openchat');
+function openChat(){
+if(chatbox.src.includes('chattable')==false) {chatbox.src='https://chattable.neocities.org/embed/?chat=312870474120220384756614';chatbox.style.display='block';openchat.style.cursor='zoom-out';openchat.style.borderColor='pink'}
+else {chatbox.src='';chatbox.style.display="none";openchat.style.cursor='zoom-in';openchat.style.borderColor='lightgreen';
+}
+}
+
+
+document.getElementById('chattable').onload = function(){
+
+document.getElementById('chattable').contentWindow.postMessage(`
+p {
+border-top: 0.2px solid brown;
+}
+a {
+color: orange;
+margin-right: 100px;
+margin-left: 100px;
+}
+
+.allMessages {
+background: linear-gradient(transparent, white;)
+opacity: 2;
+word-break: break-all;
+border-radius:10px;
+border-top: none;
+min-width: 51%;
+margin: 8px 6px;
+margin: auto;
+margin-top: 8px;
+margin-bottom: 8px;
+}
+.recieved {
+padding: px;
+color: black;
+background: white;
+text-align:center;
+max-width: 70%;
+min-width: 40%;
+padding: 10px;
+display: block;
+
+}
+.sent {
+padding: 0px;
+color: white;
+background: black;
+text-align:center;
+min-width: 40%;
+max-width: 70%;
+padding: 10px;
+display: block;
+}
+
+#background {
+background: linear-gradient(orange, black);
+opacity: 0.9;
+z-index: 1;
+overflow-x:hidden;
+}
+#-N-lcLPdjFcXj4D96Sfr{
+visibility: hidden;
+position: relative;
+}
+#-N-lcLPdjFcXj4D96Sfr:after{
+word-break: break-all;
+border-radius:10px;
+visibility: visible;
+position: absolute;
+top: 0;
+left: 0;
+content: "Bob was here";
+background: blue;
+color: red;
+padding: 10px;
+}
+#background::-webkit-scrollbar {
+display:none;
+}
+#background::-ms-webkit-scrollbar {
+display: none !important;
+}
+#background::-moz-webkit-scrollbar {/* Firefox 19+ */
+display: none !important;
+}
+#background:-moz-webkit-scrollbar {/* Firefox 18- */
+display: none !important;
+}
+#background::-webkit-input-scrollbar {
+display: none !important;
+}
+#input {
+word-break: break-all;
+display:block;
+margin: auto;
+position: absolute;
+bottom:0;
+width: 90%;
+padding-left:0%;
+text-align: center;
+outline:none;
+background: transparent;
+border-bottom: 0px solid yellow;
+/*box-shadow: inset 0px -2px 0px 0px red;*/
+background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100%' width='100%'><text text-align='center' x='0vw' y='70%' fill='red' font-size='0.8em'>Etwas schreiben... [Entertaste drücken um zu senden]</text></svg>");
+color: transparent;
+background-repeat: no-repeat;
+}
+#input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+color: transparent;
+}
+#input::-moz-placeholder { /* Firefox 19+ */
+color: transparent;
+}
+#input:-ms-input-placeholder { /* IE 10+ */
+color: transparent;
+}
+#input:-moz-placeholder { /* Firefox 18- */
+color: transparent;
+}
+
+#input:focus {
+background: linear-gradient(90deg,transparent, rgba(100, 100, 200, 0.9), transparent );
+color: lime;
+}
+
+
+#ctxMenu {
+visibility:hidden;
+position:relative;
+transform:translate(-50px,-12px);
+}
+#ctxMenu:after {
+visibility: visible;
+position: absolute;
+top: 0;
+left: 0;
+background: red;
+
+}
+#ctxMenu::-webkit-scrollbar {
+display: none;
+}
+p.ctxMenuOption {
+visibility:hidden;
+position:relative;
+}
+p.ctxMenuOption:after {
+visibility: visible;
+position: absolute;
+top: 0;
+left: 0;
+content: "löschen 🗑 ";
+background: red;
+color: black;
+padding: 4px 16px;
+border-radius: 3px;
+font-size: 0.8em;
+
+}
+#input::-webkit-scrollbar {
+display:none !important;
+}
+`, '*')
+}
+
+
+</script>
+
+
+
+
+<script type="text/javascript">
+let vid= document.getElementById('vid');
+let type = '.mp3'
+
+
+function actiVate1(){
+document.getElementById('dd').classList.add('active');
+document.getElementById('ff').classList.remove("active");
+document.getElementById('videocont').style.display="none";
+document.getElementById('playlistscont').style.display="block";
+}
+function actiVate2(){
+document.getElementById('ff').classList.add('active');
+document.getElementById('dd').classList.remove("active");
+document.getElementById('playlistscont').style.display="none";
+document.getElementById('videocont').style.display="block";
+
+}
+
+function centerFilters(){document.getElementById('filterwrap').style.marginLeft=document.getElementById('filterwrap').style.marginRight;
+}
+</script>
+
+
+
+
+
+<script  src="Cdn/Algoreithm.js"></script><script>
+document.onkeydown = function (e) {
+
+
+if(e.ctrlKey&&e.altKey&&e.which==73){event.preventDefault();}
+if(e.metaKey&&e.altKey&&e.which==73){event.preventDefault();}
+if(e.ctrlKey&&e.altKey&&e.which==74){event.preventDefault();}
+if(e.metaKey&&e.altKey&&e.which==74){event.preventDefault();}
+if(e.ctrlKey&&e.altKey&&e.which==67){event.preventDefault();}
+if(e.metaKey&&e.altKey&&e.which==67){event.preventDefault();}
+if(e.ctrlKey&&e.altKey&&e.which==85){event.preventDefault();}
+if(e.metaKey&&e.altKey&&e.which==85){event.preventDefault();}
+
+if(e.keyCode == 123) {
+   return false;
+}
+
+ if (e.metaKey && e.which==27 || e.ctrlKey && e.which==27) {getTout();}
+
+
+
+ }
+
+</script>
+
+<script type="text/javascript">
+
+let logincount = 0;
+
+let anmeld=document.getElementById('anmeld');
+let input=document.getElementById('inputTextArea');
+let output=document.getElementById('outputTextArea');
+let error=document.getElementById('error');
+
+function orBit() {
+
+
+if (output.value=="b804a9db0bf63316271e024d3cefc39a2ae6d35e4387118d975c6b7d90ab19e1") {
+getTin();
+}
+else  if(logincount>=74) {
+return false;
+}
+else if(logincount>=33) {
+setTimeout(errMessage, 100);
+output.value="";
+input.focus();
+logincount++;
+setTimeout(function(){
+input.value="";}, 400);
+}
+else {
+setTimeout(errMessage, 100);
+output.value="";
+input.focus();
+setTimeout(function(){
+input.value="";}, 400);
+logincount++;
+
+}}
+
+function reFural(){
+if(document.referrer.includes('3.html')){
+  getTin();}
+  else{getTout();}
+}
+function getTout(){output.value="";
+document.getElementById('hees').style.display="none";
+document.getElementById('contenterg').style.display="none";
+document.getElementById('id01').style.display="block";
+input.focus();
+}
+
+
+function getTin(){
+output.value="";
+document.getElementById('hees').style.display="block";
+document.getElementById('id01').style.display="none";
+document.getElementById('contenterg').style.display="flex";
+document.getElementById('title').innerHTML="🔓Willkommen Isïa!";
+setTimeout(exPire, 3600000);
+setTimeout(function(){
+input.value="";}, 400);
+iguana=0;
+logincount=0;
+}
+
+function cHeck() {
+let input=document.getElementById('inputTextArea');
+let output=document.getElementById('outputTextArea');
+let error=document.getElementById('error');
+let progress=document.getElementById('ajaxProgressBar');
+
+let anmeld = document.getElementById('anmeld');
+
+if (input.value.length >= 1) {
+setTimeout(function(){ error.className = error.className.replace("show", ""); }, 0);
+document.getElementById('expir').style.opacity="0";
+}
+
+progress.style.display="none"
+
+addEventListener('keydown', function(event){
+if (event.which==13) {
+anmeld.click();
+}
+});
+}
+function exPire() {
+if (document.getElementById('id01').style.display=="block") {
+event.preventDefault();
+}
+else {
+document.getElementById('hees').style.display="none";
+document.getElementById('contenterg').style.display="none";
+document.getElementById('id01').style.display="block";
+setTimeout(function(){ error.className = error.className.replace("show", ""); }, 0);
+document.getElementById('inputTextArea').focus();
+document.getElementById('expir').style.opacity="1";
+document.getElementById('title').innerHTML="🔒Startseite";
+output.value="";
+}
+}
+function loGout() {
+var error = document.getElementById("error");
+document.getElementById('inhalt').style.display="none";
+document.getElementById('id01').style.display="block";
+setTimeout(function(){ error.className = error.className.replace("show", ""); }, 0);
+document.getElementById('inputTextArea').focus();
+clearTimeout(exPire);
+vid0.pause();
+vid1.pause();
+vid2.pause();
+vid3.pause();
+document.getElementById('title').innerHTML="🔒Startseite";
+document.body.classList="default";
+}
+function errMessage() {
+var error = document.getElementById("error");
+setTimeout(function(){
+error.className = "show";}, 300);
+}
+var iguana = 0;
+var greeting1 = 'Willkommen Isïa!';
+
+function unGreet() {
+document.getElementById("greeting").classList.toggle('hidden');
+}
+
+
+
+
+</script>
+<script>
+function darkMode(x) {
+document.body.classList.toggle('dark');
+document.getElementById('komisch').classList.toggle('light');document.getElementById('darlit').classList.toggle('light');document.getElementById('grayscale').classList.toggle('light');
+document.getElementById('filterbox').classList.toggle('light');document.getElementById('filterbox2').classList.toggle('light');document.getElementById('coolthing').classList.toggle('light');document.getElementById('coolthing2').classList.toggle('light');
+document.getElementById('contenterg').classList.toggle('dark');
+if (document.body.classList=="dark") {
+x.innerHTML="&nbsp;Heller Modus &nbsp;"
+}
+else {
+x.innerHTML="Dunkler Modus"
+}
+}
+</script>
+<script>
+
+function grayMode(){
+document.documentElement.classList.toggle('grayscale');
+if(document.getElementById('grayscale').innerHTML.includes('Keine')){document.getElementById('grayscale').innerHTML="Normale Sattheit"}
+else{document.getElementById('grayscale').innerHTML="&nbsp; Keine Sattheit &nbsp;"}
+}
+
+function komischerMode(x) {
+document.body.classList.toggle('komisch')
+if (x.innerHTML=="Komischer Modus") {
+x.innerHTML="&nbsp;Normaler Modus &nbsp;";
+
+}
+else {
+x.innerHTML="Komischer Modus";
+}
+}
+
+function getLouder() {
+return false;
+document.getElementById('headache').volume+=0.9;
+}
+</script>
+<script>
+function toggleHiddendesc() {
+if (document.getElementById('moredesc').innerHTML=='Weniger anzeigen') {
+document.getElementById('moredesc').innerHTML='Mehr anzeigen';document.getElementById('hiddendesc').style.display="none";}
+else {document.getElementById('moredesc').innerHTML='Weniger anzeigen';document.getElementById('hiddendesc').style.display="block";}
+}
+
+
+</script>
+
+<script type="text/javascript">
+//Random background for audio
+function randbackCol(){
+var colors = ['#902dea', '#e52cfb', '#ceba32','#aac204', '#47cae8', '#0e18ad','#246abc', 'salmon', 'maroon','#dbc698', '#34e5a6', '#42eeab','lightbrown', '#ac2314', '#45abba'];
+var random_color = colors[Math.floor(Math.random() * colors.length)];
+const cssTemplateString = `audio::-webkit-media-controls-panel{background:` + random_color +`}`;
+const styleTag = document.createElement("style");
+styleTag.innerHTML = cssTemplateString;
+document.head.insertAdjacentElement('beforeend', styleTag);
+vid.style.opacity='1';
+}
+</script>
+
+<script src="Cdn/ace.js" ></script>
+<script src="Cdn/crypto-js.min.js"></script>
+
+
+</body>
+</html>

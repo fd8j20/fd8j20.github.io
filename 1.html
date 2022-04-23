@@ -1,0 +1,491 @@
+<!doctype html>
+<html oncontextmenu="return false" lang="de"><head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title style="color: red"id="title">🔒Startseite
+</title>
+<script>
+if (window !== top) top.location='getlost';</script>
+<link rel="icon" href="Media/4.svg">
+<link id="style"rel="stylesheet" href="Styles/1.css">
+</head>
+
+<body onload="reFural()" class="dark">
+
+
+<div class="all">
+
+<div style="display:none">
+<progress id="ajaxProgressBar" class="progress is-tiny is-dark" max="100" style="display: none;">50%</progress>
+</div>
+
+
+<div id="id01" style="display:none" class="modal">
+
+<div class="modal-content animate">
+
+
+<div class="container">
+
+
+<input type='text' id="inputTextArea" onload="this.value=''"oninput="cHeck()"class="textarea is-large is-primary" placeholder="Passwort eingeben" autofocus="" >
+
+<button id="anmeld" onclick="orBit()"type="submit">Anmelden</button>
+
+</div //container>
+
+<p id='error'>
+Die Anmeldung ist fehlgeschlagen</p>
+<p id="expir">Ihre Sitzung ist ungültig oder abgelaufen</p>
+</div //animate>
+</div  //modal-content animate>
+
+
+
+<div id="inputFooterStatus" class="is-pulled-right">Size : <strong>8</strong> B, 8 Characters</div>
+<div class="buttons is-centered">  <input display="none" type="checkbox" id="isAuto" checked="true"></div>
+
+<button id="defaultAction"
+
+//change number after SHA for different encoding
+
+onclick="generateSHA256Hash();"
+-->  <!--Extremely necesary-->   class="button is-medium is-info mr-4"></button>
+
+
+<textarea style="display:none"id="outputTextArea" class="textarea is-large is-info" placeholder="Generated SHA256 Hash"></textarea>
+
+
+
+
+<!--end leave alone-->
+
+
+
+<div id="inhalt" style="display:block">
+
+
+<dox id="hees" style="display:none">
+
+
+
+
+<div class="navbar">
+<!--
+<span id="greeting" class="header"></span>
+<br class="ferret">-->
+
+<div id="filterbox2">
+<div id="filterwrap">
+<span class="header3" onclick="darkMode(this)">&nbsp</span>
+<span class="header3" onclick="komischerMode(this)">&nbsp</span>
+<span class="header3"onclick="grayMode(this)">&nbsp</span>
+
+</div>
+</div>
+
+
+
+</div>
+<!--  <hr class="ug">-->
+<div id="coolthing2" class="" style="">
+
+</div>
+
+
+
+
+
+
+
+<div class="navbar">
+<!--
+<span id="greeting" class="header"></span>
+<br class="ferret">-->
+
+<div id="filterbox">
+<div id="filterwrap">
+<span class="header2" id="darlit"onclick="darkMode(this)">&nbspHeller Modus&nbsp</span>
+<span class="header2" id="komisch"onclick="komischerMode(this)">Komischer Modus</span>
+<span id="grayscale"class="header2"onclick="grayMode(this)">&nbsp Keine Sattheit &nbsp</span>
+
+</div>
+</div>
+
+
+
+</div>
+<!--  <hr class="ug">-->
+<div id="coolthing" class="" style="">
+
+</div>
+
+</dox>
+
+</div //inhalt>
+
+
+<!--end sticky -->
+
+
+<div class="content dark"  id="contenterg" style="">
+
+
+
+
+<div style=""class="commentsection">
+
+  <video controls controlslist="nodownload" style=""id="vid" autofocus src="" onended="autoPlay()" onload="updateDownload();"ondurationchange="alterDescription();updateDownload();"tabindex="-1">
+</video>
+
+<!--First two divs in block for small screen-->
+<h1 id="titl">Rachma<wbr>ninov Klavier<wbr>trio2 in d-<wbr>Moll</h1>
+
+<!--First two divs in block for small screen-->
+
+<div id="vidactions" class="comment">
+<a class="downlo" id="downlo"  tabindex="-1"  href="" download="Konzert (08.04.2022)">Herunterladen</a>
+
+</div>
+
+<!--start here-->
+<div id="descrip"class="comment">
+
+
+<div class="channel-profile" style="cursor: pointer" id="profai" onclick="openProf()">
+<img class="profileimage"src="Media/Shoebill1.jpeg">
+<span id="channel-name"><h2 id="nameg" style="">&nbspTheo</h2></span>
+
+</div>
+<br>
+<h3 id="subscribe">Abon<wbr>nieren | 0</h3>
+<span id="sharing" style="">Geteilt April 22, 2022</span>
+<br>
+<p id="elab">Konzert (08.04.2022)</p>
+<div id="hiddendesc" style="display:none">
+<div id="timestamp" style="">
+<lf onclick="skiptoTimestamp0()" class="fardo"><span class="time">00:01</span><span class="bork"> Anfang</span></lf>
+<lf onclick="skiptoTimestamp1()" class="fardo"><span class="time">00:47</span><span class="bork"> 1</span></lf>
+<lf onclick="skiptoTimestamp2()"class="fardo"><span class="time">01:37</span><span class="bork"> 2</span></lf>
+<lf onclick="skiptoTimestamp3()"class="fardo"><span class="time">04:14</span><span class="bork"> 3</span></lf>
+<lf onclick="skiptoTimestamp4()"class="fardo"><span class="time">04:50</span><span class="bork"> 4</span></lf>
+<lf onclick="skiptoTimestamp5()"class="fardo"><span class="time">05:41</span><span class="bork"> 5</span></lf>
+<lf onclick="skiptoTimestamp6()"class="fardo"><span class="time">06:04</span><span class="bork"> 6</span></lf>
+<lf onclick="skiptoTimestamp7()"class="fardo"><span class="time">06:38</span><span class="bork"> 7</span></lf>
+<lf onclick="skiptoTimestamp8()"class="fardo"><span class="time">07:39</span><span class="bork"> 8</span></lf>
+<lf onclick="skiptoTimestamp9()"class="fardo"><span class="time">08:11</span><span class="bork"> 9</span></lf>
+<lf onclick="skiptoTimestamp10()"class="fardo"><span class="time">09:12</span><span class="bork"> 10</span></lf>
+<lf onclick="skiptoTimestamp11()"class="fardo"><span class="time">09:43</span><span class="bork"> 11</span></lf>
+<lf onclick="skiptoTimestampEnde()"class="fardo"><span class="time">10:08</span><span class="bork"> Ap<wbr>plaus</span></lf>
+    <lf style=""id="fuk"onclick="skiptoTimestampFukit()"class="fardo"><span class="time">16:01</span><span class="bork">"Fukit"</span></lf>
+
+
+
+        </div>
+      </div>
+      <p id="moredesc">Mehr anzeigen</p>
+
+
+
+      <hr>
+      <br>
+
+
+      </div>
+
+      <script type="text/javascript">
+      let vid= document.getElementById('vid');
+      let srcstore = document.getElementById('tempsrcstore');
+      function skiptoTimestamp0() {vid.currentTime=1.3;vid.play();}
+      function skiptoTimestamp1() {vid.currentTime=47.33;vid.play();}
+      function skiptoTimestamp2() {vid.currentTime=97.22;vid.play();}
+      function skiptoTimestamp3() {vid.currentTime=254.46;vid.play();}
+      function skiptoTimestamp4() {vid.currentTime=290.74;vid.play();}
+      function skiptoTimestamp5() {vid.currentTime=341.46;vid.play();}
+      function skiptoTimestamp6() {vid.currentTime=364.4;vid.play();}
+      function skiptoTimestamp7() {vid.currentTime=398.2;vid.play();}
+      function skiptoTimestamp8() {vid.currentTime=459.5;vid.play();}
+      function skiptoTimestamp9() {vid.currentTime=491.13;vid.play();}
+      function skiptoTimestamp10() {vid.currentTime=552.2;vid.play();}
+      function skiptoTimestamp11() {vid.currentTime=583.53;vid.play();}
+      function skiptoTimestampEnde() {vid.currentTime=608.7;vid.play();}
+      function skiptoTimestampFukit() {vid.currentTime=961.66;vid.play();}
+      function refuKit() {
+      if(document.getElementById('replifuk').innerHTML=="⏸"){clearInterval(skiptoTimestampFukit);document.getElementById('vid').pause(); clearTimeout(refuKit);document.getElementById('replifuk').innerHTML="↩"}else if (document.getElementById('replifuk').innerHTML=="↩"){setInterval(skiptoTimestampFukit, 410);document.getElementById('replifuk').innerHTML="⏸";}
+
+      }
+      function nextVideo(x) {
+      let lastvid=document.getElementById('lastvid');let midvid=document.getElementById('lastvid2');let firstvid=document.getElementById('lastvid3');let novid = document.getElementById('novid');
+      if(vid.src==x.src){return false}else {novid.src=vid.src;vid.src=x.src;vid.play();firstvid.src=midvid.src;midvid.src=lastvid.src;lastvid.src=novid.src;}
+      }
+      function nextVideo2(x) {
+      let lastvid=document.getElementById('lastvid');let midvid=document.getElementById('lastvid2');let firstvid=document.getElementById('lastvid3');let novid = document.getElementById('novid');
+      if(vid.src==x.src){return false}else {novid.src=vid.src;vid.src=x.src;vid.play();midvid.src=lastvid.src;lastvid.src=novid.src;}
+      }
+      function nextVideo3(x) {
+      let lastvid=document.getElementById('lastvid');let midvid=document.getElementById('lastvid2');let firstvid=document.getElementById('lastvid3');let novid = document.getElementById('novid');
+      if(vid.src==x.src){return false}else {novid.src=vid.src;vid.src=x.src;vid.play();lastvid.src=novid.src;}
+      }
+      function autoPlay() {if(document.getElementById('autoplay').checked==true){setTimeout(function(){document.getElementById('lastvid3').click();},4000)}}
+
+
+function updateDownload() {
+  let elab=document.getElementById('elab');let downlo=document.getElementById('downlo');
+  downlo.href=vid.src;downlo.download=elab.innerHTML+'.mp4';
+}
+      function alterDescription(){
+      if(vid.src.includes('dkLMCo4gE9efD6w')){elab.innerHTML="Konzert (08.04.2022)";}if(vid.src.includes('nsgjMdXrHYgtCCk')){elab.innerHTML="Erste Videoaufnahme (31.03.2022)";}
+      if(vid.src.includes('PBDRMpWPibDsZn8')){elab.innerHTML="Zweite Videoaufnahme (31.03.2022)"}if(vid.src.includes('YmZsQKAi3fMxQ2P')){elab.innerHTML="Dritte Videoaufnahme (31.03.2022)"}
+      if(vid.src.includes('dkLMCo4gE9efD6w')){document.getElementById('timestamp').style.display="block";document.getElementById('moredesc').style.display="block"}else{document.getElementById('timestamp').style.display="none";document.getElementById('moredesc').style.display="none"};
+      }
+  </script>
+
+
+      <div id="morevideoscontainer" style="" class="comment">
+      <div id="morevideos" style="display:block">
+
+      <p id="autplay">nächstes Video<wbr> automatisch abspielen</p>
+      <label class="switch"><input id="autoplay" type="checkbox" checked="true"><span class="slider round"></span></label>
+      <video style="display:none"id="novid"class="smallvideo" controlsList="nodownload" onplaying="vid3Play()"onpause="vid3Pause()"  onpause="" preload="none" onContextMenu="return false;"  tabindex="2" sandbox src=""><source sandbox src="" type="video/mp4"></video>
+      <video id="lastvid3" style="z-index: 20"class="smallvideo"onclick="nextVideo(this)" controlsList="nodownload" onplaying="vid3Play()"onpause="vid3Pause()"  onpause="" preload="metadata" onloadedmetadata="this.style.display='block'"   onContextMenu="return false;"  tabindex="2" sandbox src=""><source sandbox src="" type="video/mp4"></video>
+      <video id="lastvid2" class="smallvideo"onclick="nextVideo2(this)" controlsList="nodownload" onplaying="vid3Play()"onpause="vid3Pause()"  onpause="" preload="metadata" onloadedmetadata="this.style.display='block'"   onContextMenu="return false;"  tabindex="2" sandbox src=""><source sandbox src="" type="video/mp4"></video>
+      <video id="lastvid"class="smallvideo" onclick="nextVideo3(this)"controlsList="nodownload" onplaying="vid3Play()"onpause="vid3Pause()"  onpause="" preload="metadata" onloadedmetadata="this.style.display='block'"  onContextMenu="return false;"  tabindex="2" sandbox src=""><source sandbox src="" type="video/mp4"></video>
+      </div>
+      </div>
+
+      </div>
+
+
+                      <div class="row">
+
+                      <br class="ferret">
+
+      </div>
+
+
+
+
+</div //contenterg>
+</div //all>
+
+
+
+<script type="text/javascript">
+
+</script>
+
+
+
+
+
+
+<script  src="Cdn/Algoreithm.js"></script><script>
+document.onkeydown = function (e) {
+
+
+if(e.ctrlKey&&e.altKey&&e.which==73){event.preventDefault();}
+if(e.metaKey&&e.altKey&&e.which==73){event.preventDefault();}
+if(e.ctrlKey&&e.altKey&&e.which==74){event.preventDefault();}
+if(e.metaKey&&e.altKey&&e.which==74){event.preventDefault();}
+if(e.ctrlKey&&e.altKey&&e.which==67){event.preventDefault();}
+if(e.metaKey&&e.altKey&&e.which==67){event.preventDefault();}
+if(e.ctrlKey&&e.altKey&&e.which==85){event.preventDefault();}
+if(e.metaKey&&e.altKey&&e.which==85){event.preventDefault();}
+
+if(e.keyCode == 123) {
+   return false;
+}
+
+ if (e.metaKey && e.which==27 || e.ctrlKey && e.which==27) {getTout();}
+
+
+
+ }
+
+</script>
+
+<script type="text/javascript">
+
+let logincount = 0;
+
+let anmeld=document.getElementById('anmeld');
+let input=document.getElementById('inputTextArea');
+let output=document.getElementById('outputTextArea');
+let error=document.getElementById('error');
+
+function orBit() {
+
+
+if (output.value=="b804a9db0bf63316271e024d3cefc39a2ae6d35e4387118d975c6b7d90ab19e1") {
+getTin();
+}
+else  if(logincount>=74) {
+return false;
+}
+else if(logincount>=33) {
+setTimeout(errMessage, 100);
+output.value="";
+input.focus();
+logincount++;
+setTimeout(function(){
+input.value="";}, 400);
+}
+else {
+setTimeout(errMessage, 100);
+output.value="";
+input.focus();
+setTimeout(function(){
+input.value="";}, 400);
+logincount++;
+
+}}
+
+function reFural(){
+if(document.referrer.includes('3.html')){
+  getTin();}
+  else{getTout();}
+}
+function getTout(){output.value="";
+document.getElementById('hees').style.display="none";
+document.getElementById('contenterg').style.display="none";
+document.getElementById('id01').style.display="block";
+input.focus();
+}
+
+let lastvid=document.getElementById('lastvid');let midvid=document.getElementById('lastvid2');let firstvid=document.getElementById('lastvid3');let novid = document.getElementById('novid');
+function getTin(){
+output.value="";
+document.getElementById('hees').style.display="block";
+document.getElementById('id01').style.display="none";
+document.getElementById('contenterg').style.display="block";
+document.getElementById('title').innerHTML="🔓Willkommen Isïa!";
+vid.focus();
+vid.src="https://files.trom.tf/s/dkLMCo4gE9efD6w/download";
+firstvid.src="https://files.trom.tf/s/YmZsQKAi3fMxQ2P/download";
+midvid.src="https://files.trom.tf/s/PBDRMpWPibDsZn8/download";
+lastvid.src="https://files.trom.tf/s/nsgjMdXrHYgtCCk/download";
+novid.src="https://files.trom.tf/s/dkLMCo4gE9efD6w/download";
+firstvid.style.opacity="1";
+setTimeout(function(){vid.pause()}, 5)
+setTimeout(exPire, 3600000);
+setTimeout(function(){
+input.value="";}, 400);
+
+iguana=0;
+logincount=0;
+}
+
+function cHeck() {
+let input=document.getElementById('inputTextArea');
+let output=document.getElementById('outputTextArea');
+let error=document.getElementById('error');
+let progress=document.getElementById('ajaxProgressBar');
+
+let anmeld = document.getElementById('anmeld');
+
+if (input.value.length >= 1) {
+setTimeout(function(){ error.className = error.className.replace("show", ""); }, 0);
+document.getElementById('expir').style.opacity="0";
+}
+
+progress.style.display="none"
+
+addEventListener('keydown', function(event){
+if (event.which==13) {
+anmeld.click();
+}
+});
+}
+function exPire() {
+if (document.getElementById('id01').style.display=="block") {
+event.preventDefault();
+}
+else {
+  vid.pause();
+document.getElementById('hees').style.display="none";
+document.getElementById('contenterg').style.display="none";
+document.getElementById('id01').style.display="block";
+setTimeout(function(){ error.className = error.className.replace("show", ""); }, 0);
+document.getElementById('inputTextArea').focus();
+document.getElementById('expir').style.opacity="1";
+document.getElementById('title').innerHTML="🔒Startseite";
+output.value="";
+}
+}
+
+function errMessage() {
+var error = document.getElementById("error");
+setTimeout(function(){
+error.className = "show";}, 300);
+}
+var iguana = 0;
+var greeting1 = 'Willkommen Isïa!';
+
+</script>
+<script>
+function darkMode(x) {
+document.body.classList.toggle('dark');
+document.getElementById('komisch').classList.toggle('light');document.getElementById('darlit').classList.toggle('light');document.getElementById('grayscale').classList.toggle('light');
+document.getElementById('filterbox').classList.toggle('light');document.getElementById('filterbox2').classList.toggle('light');document.getElementById('coolthing').classList.toggle('light');document.getElementById('coolthing2').classList.toggle('light');
+document.getElementById('contenterg').classList.toggle('dark');
+if (document.body.classList=="dark") {
+x.innerHTML="&nbsp;Heller Modus &nbsp;"
+}
+else {
+x.innerHTML="Dunkler Modus"
+}
+}
+</script>
+<script>
+  function openProf() {
+    window.location.assign('3.html');
+  }
+  function grayMode(){
+  document.documentElement.classList.toggle('grayscale');
+  if(document.getElementById('grayscale').innerHTML.includes('Keine')){document.getElementById('grayscale').innerHTML="Normale Sattheit"}
+  else{document.getElementById('grayscale').innerHTML="&nbsp; Keine Sattheit &nbsp;"}
+  }
+
+  function komischerMode(x) {
+  if (x.innerHTML=="Komischer Modus") {
+  x.innerHTML="&nbsp;Normaler Modus &nbsp;";
+  if(vid.style.filter.includes('invert(0%)')){vid.style.filter.replace('invert(0%)','invert(100%)');}
+  else{vid.style.filter+='invert(100%)'}
+
+  if(vid0.style.filter.includes('grayscale(0%)')) {vid0.style.filter='grayscale(0%) invert(100%)'}else{vid0.style.filter='grayscale(100%) invert(100%)'}
+  if(vid1.style.filter.includes('grayscale(0%)')) {vid1.style.filter='grayscale(0%) invert(100%)'}else{vid1.style.filter='grayscale(100%) invert(100%)'}
+  if(vid2.style.filter.includes('grayscale(0%)')) {vid2.style.filter='grayscale(0%) invert(100%)'}else{vid2.style.filter='grayscale(100%) invert(100%)'}
+  if(vid3.style.filter.includes('grayscale(0%)')) {vid3.style.filter='grayscale(0%) invert(100%)'}else{vid3.style.filter='grayscale(100%) invert(100%)'}
+  }
+
+
+  else {
+  x.innerHTML="Komischer Modus";
+  if(vid.style.filter.includes('invert(0%)')){vid.style.filter.replace('invert(0%)','invert(100%)');}
+  else{vid.style.filter+='invert(100%)'}
+
+  if(vid0.style.filter.includes('grayscale(0%)')) {vid0.style.filter='grayscale(0%) invert(0%)'}else{vid0.style.filter='grayscale(100%) invert(0%)'}
+  if(vid1.style.filter.includes('grayscale(0%)')) {vid1.style.filter='grayscale(0%) invert(0%)'}else{vid1.style.filter='grayscale(100%) invert(0%)'}
+  if(vid2.style.filter.includes('grayscale(0%)')) {vid2.style.filter='grayscale(0%) invert(0%)'}else{vid2.style.filter='grayscale(100%) invert(0%)'}
+  if(vid3.style.filter.includes('grayscale(0%)')) {vid3.style.filter='grayscale(0%) invert(0%)'}else{vid3.style.filter='grayscale(100%) invert(0%)'}
+  }
+  }
+
+</script>
+<script>
+document.getElementById('moredesc').addEventListener('click', function(){toggleHiddendesc()});
+function toggleHiddendesc() {
+if (document.getElementById('moredesc').innerHTML=='Weniger anzeigen') {
+document.getElementById('moredesc').innerHTML='Mehr anzeigen';document.getElementById('hiddendesc').style.display="none";}
+else {document.getElementById('moredesc').innerHTML='Weniger anzeigen';document.getElementById('hiddendesc').style.display="block";}
+}
+
+
+</script>
+
+
+
+<script src="Cdn/ace.js" ></script>
+<script src="Cdn/crypto-js.min.js"></script>
+
+
+</body>
+</html>
