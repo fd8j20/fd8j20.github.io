@@ -64,7 +64,7 @@ onclick="generateSHA256Hash();"class="button is-medium is-info mr-4"></button>
 </div>
 <br>
 <br>
-<h3 id="subscribe">Abon<wbr>nieren | 0</h3>
+<h3 id="subscribe"><a style="text-decoration:none; color: inherit" href="feed">Abon<wbr>nieren | 0</a></h3>
 <p id="dd"class="aboui active" onclick='actiVate1()'>Wiedergabelisten</p>
 <p id="ff"class="aboui" onclick='actiVate2()'>Videos</p>
 <a class="aboui" style="display:block;text-decoration:none" href="4.html">Kontakt</a>
@@ -164,7 +164,7 @@ setTimeout(function(){
 input.value="";}, 400);
 logincount++;}}
 function reFural(){
-if(document.referrer.includes('4.html')||document.referrer.includes('2.html')||document.referrer.includes('1.html')){
+if(document.referrer.includes('4.html')||document.referrer.includes('2.html')||document.referrer.includes('1.html')||document.referrer.includes('feed')){
 getTin();}
 else{getTout();}}
 function getTout(){output.value="";
