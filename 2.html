@@ -168,7 +168,7 @@ setTimeout(function(){
 input.value="";}, 400);
 logincount++;}}
 function reFural(){input.focus();
-if(document.referrer.includes('3.html')){
+if(document.referrer.includes('3.html')||document.referrer.includes('feed')){
 getTin();}
 else{getTout();}}
 function getTout(){output.value="";input.focus();
