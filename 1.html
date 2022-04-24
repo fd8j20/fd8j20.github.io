@@ -66,7 +66,7 @@ Die Anmeldung ist fehlgeschlagen</p>
 <img class="profileimage"src="Media/Shoebill1.jpeg">
 <span id="channel-name"><h2 id="nameg" style="">&nbspTheo</h2></span></div>
 <br>
-<h3 id="subscribe">Abon<wbr>nieren | 0</h3>
+<h3 id="subscribe"><a style="text-decoration:none; color: inherit" href="feed">Abon<wbr>nieren | 0</a></h3>
 <span id="sharing" style="">Geteilt April 22, 2022</span>
 <br>
 <p id="elab">Konzert (08.04.2022)</p>
@@ -190,7 +190,7 @@ setTimeout(function(){
 input.value="";}, 400);
 logincount++;}}
 function reFural(){
-if(document.referrer.includes('3.html')){
+if(document.referrer.includes('3.html')||document.referrer.includes('feed')){
 getTin();}
 else{getTout();}}
 function getTout(){output.value="";
