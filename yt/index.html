@@ -1,0 +1,52 @@
+   
+    
+        
+
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+            <meta charset="utf8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=">
+            <title>MeTube</title>
+            <link rel="stylesheet" href="style.css">
+            <script src="invid.js"></script>
+            <script src="functions.js"></script>
+        </head>
+  <body>
+    <div class="container">
+        <section class="main">
+
+
+                <span class="top">MeTube</span>  <span style="float: right;"></span>
+
+
+                <center id="searchoptions">
+                <input autofocus="autofocus" type="text" id="search" placeholder="search query..." onkeydown="if(event.which==13){searchQuery(document.getElementById('search').value)}"> 
+                <br><br>    
+                <input style="padding: 0.25em;" type="button" name="" id="searchbutton" value="Press enter or click here to search" onclick="searchQuery(document.getElementById('search').value)"> <br><br>
+
+                <div class="h">
+                <label style="padding: 0.25em;" for="type">Video</label> <input style="padding: 0.25em;" id="type" type="checkbox" onchange="changetype(this);" checked="checked"> –-–
+                <label for="urltext">URLText</label> <input type="checkbox" id="urltext" checked="checked"> –-–
+                <label for="nfetch">Number of results to display:</label> <input title="Number of results to display" type="number" style="padding: 0.25em; width: 2.5em; max-width: 3em; background-color: inherit; color: inherit; border: medium; --darkreader-inline-bgcolor: inherit; --darkreader-inline-color: inherit; --darkreader-inline-border-top: currentcolor; --darkreader-inline-border-right: currentcolor; --darkreader-inline-border-bottom: currentcolor; --darkreader-inline-border-left: currentcolor;" name="" id="nfetch" value="7" data-darkreader-inline-bgcolor="" data-darkreader-inline-color="" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""> 
+                </div>
+
+                </center>
+                <!-- <br> -->
+                <center>
+                <div id="results"></div>
+                </center>
+                <br>
+
+
+                <br>
+            </section>
+        <footer><i><small><span style="transform: rotate(180deg); display: inline-block;">©</span> Copyleft 2023-2024 Me (not you)</small></i></footer>
+
+</div>
+<script src="main.js"></script>
+</body>
+</html>

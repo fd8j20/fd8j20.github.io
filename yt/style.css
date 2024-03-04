@@ -1,0 +1,17 @@
+* {outline: none;}
+.hidden,.h {display: none;}
+body{background-color: black; color: white; min-height: 100vh}
+div {max-width: 100%;}
+video {max-width: 100%;}
+summary.title{margin-top: 0.5em; font-size: 125%; font-weight:bold;}
+#search {border-radius: 2em; padding: 0.75em; border: none; border: 1px solid #ffffffcc; background-color: #ffffff11; color: #ffffffaa;}
+#search:focus{border: 1px solid #ffffffee; color: #ffffff;}
+#searchoptions {max-width: 100%;}
+#searchbutton {background-color: #ffffff11; color: #ffffffaa; border-radius: 3px; border: 1px solid #ffffff33; font-size: 0.6em; cursor: pointer}
+.channellink {color: silver}
+
+
+html, body{ height: 100%; margin: 0px; font-size: 1.1em;} .container{ min-height: 100%; display: flex; flex-direction: column;} section{ flex: 1; padding: 5px 8px;} 
+
+footer{background: hsla(241, 48%, 59%, 0.3); padding: 10px; margin-top: 10px; clear: both; position: relative;}
+span.top{padding: 5px;}
